@@ -1,6 +1,5 @@
 from random import randint
 
-
 def statistic(count, lower, upper):
     a = []
     s = 0
@@ -9,6 +8,9 @@ def statistic(count, lower, upper):
         a.append(x)
         s += x
         print(x, end=" ")
+        
     print("\n", min(a), end=" - Nejmenší číslo, ")
     print(max(a), end=" - Největší číslo, ")
     print(s/count, end=" - Průměr" )
+
+print(statistic(10,1,100))
