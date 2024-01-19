@@ -1,5 +1,5 @@
 import random
-
+import math
 def find_treasure(width, steps):
     board = [[0] * width for _ in range(width)]
     treasure_location = (random.randint(0, width - 1), random.randint(0, width - 1))
@@ -39,7 +39,7 @@ def treasure_analysis(width, steps, count):
         success_percentage = (treasure_count / count) * 100
         average_steps = total_steps_taken / treasure_count
         print(f"Success Percentage: {success_percentage}%")
-        print(f"Average Steps Taken to Find Treasure: {average_steps}")
+        print(f"Average Steps Taken to Find Treasure: {math.floor(average_steps)}")
     else:
         print("Bez Pokladu.")
 
