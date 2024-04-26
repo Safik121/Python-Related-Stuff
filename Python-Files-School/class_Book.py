@@ -15,7 +15,9 @@ def print_info(book: Book) -> None:
     print("author:" + " " * (maxlenvar - len("author:")) + book.author)
     print("isbn:" + " " * (maxlenvar - len("isbn:")) + str(book.isbn))
     print("price:" + " " * (maxlenvar - len("price:")) + str(book.price))
-
+""" 
+CC - Jakub Sukdol, this part can be only used for personal use. You must not claim the code as your, redistribute or edit it to other users or sell it for financial profit.
+"""
 
 def draw_cover(self):
         print("")
