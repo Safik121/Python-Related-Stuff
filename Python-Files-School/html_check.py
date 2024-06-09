@@ -35,15 +35,13 @@ def html_check(text):
                         return False
                 else:
                     html_token, new_index = go_trough(index, text)
-                    if html_token not in first_appearance:
-                        first_appearance.append(html_token)
-                    elif html_token in first_appearance and first_appearance.pop() != html_token:
-                        return False
+                    first_appearance.append(html_token)
                 index = new_index
             index += 1
             #print(index)
     return not first_appearance
 
-print(html_check("<ik><b></b></ik>"))
+print(html_check("<ik><b></b></ik></c>"))
 print(html_check("</ik><b></b></ik>"))
 print(html_check("<h1><b></b></h1>"))
+print(html_check("<a>au<a>"))
